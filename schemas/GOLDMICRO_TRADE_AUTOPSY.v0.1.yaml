@@ -1,0 +1,73 @@
+schema: GOLDMICRO_TRADE_AUTOPSY.v0.1
+purpose: execution_reconstruction
+trade:
+  trade_id: null
+  source: null
+  instrument: null
+  broker_symbol: null
+  reference_symbol: GC=F
+  direction: null
+  entry_timestamp: null
+  entry_price: null
+  exit_timestamp: null
+  exit_price: null
+  realized_result: null
+context:
+  h4: {structure: null, location: null}
+  h1: {structure: null, location: null}
+  m15: {structure: null, location: null}
+microstructure:
+  m5:
+    state_at_entry: null
+    prior_state: null
+    direction: null
+    range: null
+    body: null
+    body_ratio: null
+    upper_wick: null
+    lower_wick: null
+    wick_ratio: null
+    relative_range: null
+    atr_ratio: null
+    local_high_distance: null
+    local_low_distance: null
+    displacement_state: null
+  m1:
+    state_at_entry: null
+    admission_state: null
+    confirmation: null
+    immediate_adverse_excursion: null
+forward_excursion:
+  +5m: {mfe: null, mae: null, close_return: null}
+  +10m: {mfe: null, mae: null, close_return: null}
+  +15m: {mfe: null, mae: null, close_return: null}
+  +20m: {mfe: null, mae: null, close_return: null}
+  +25m: {mfe: null, mae: null, close_return: null}
+timing:
+  admission: null
+  realization: null
+  realization_latency: null
+  exit_state: null
+counterfactual:
+  actual_entry: null
+  first_valid_admission: null
+  first_displacement: null
+  hypothetical_entry: null
+  hypothetical_mfe: null
+  hypothetical_mae: null
+  entry_delta_minutes: null
+diagnosis:
+  edge: null
+  direction: null
+  admission: null
+  realization: null
+  exit: null
+classification:
+  primary_failure: null
+  secondary_failure: null
+  counterfactual: null
+metadata:
+  analyst: null
+  created_at: null
+  evidence_refs: []
+  threshold_declared_before_outcome_review: false
