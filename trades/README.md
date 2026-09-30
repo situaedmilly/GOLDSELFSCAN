@@ -1,0 +1,1 @@
+Trade autopsies belong here. One file per reconstructed trade is preferred: `trades/GOLDMICRO_TRADE_AUTOPSY_0001.yaml`. Actual broker execution data must remain distinguishable from GC=F reconstruction data.
