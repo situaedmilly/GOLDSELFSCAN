@@ -1,0 +1,29 @@
+{
+  "schema": "GOLDSELFSCAN.SCAN_MANIFEST.v0.1",
+  "scan_id": "goldmicro-local-001",
+  "source_commit": null,
+  "instrument": {
+    "broker_symbol": "XAUUSD",
+    "reference_symbol": "GC=F"
+  },
+  "timeframes": {
+    "primary": "M5",
+    "precision": "M1"
+  },
+  "inputs": {
+    "m5_csv": "./data/XAUUSD_M5.csv",
+    "m1_csv": "./data/XAUUSD_M1.csv"
+  },
+  "window": {
+    "atr_period": 14,
+    "forward_minutes": [5, 10, 15, 20, 25]
+  },
+  "predicate": {
+    "min_body_ratio": 0.60,
+    "min_range_atr_ratio": 1.00
+  },
+  "authority": {
+    "live_trading": false,
+    "output_is_signal": false
+  }
+}
