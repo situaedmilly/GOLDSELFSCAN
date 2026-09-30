@@ -1,0 +1,43 @@
+schema: GOLDSELFSCAN.MT5_EXPERIMENT.v0.1
+purpose: deterministic_mt5_research_workload
+authority: research_only
+live_trading: prohibited
+
+workload:
+  workload_id: null
+  repository: GOLDSELFSCAN
+  source_commit: null
+  strategy_id: null
+  strategy_version: null
+  created_at: null
+
+market:
+  broker_symbol: null
+  reference_symbol: GC=F
+  timeframe: M5
+  precision_timeframe: M1
+  from: null
+  to: null
+
+execution:
+  terminal_mode: portable
+  terminal_profile: null
+  tester_mode: null
+  optimization: false
+  shutdown_after_run: true
+  timeout_seconds: null
+
+parameters: {}
+
+evidence:
+  raw_artifacts: []
+  logs: []
+  report: null
+
+invariants:
+  - broker_symbol != reference_symbol unless explicitly declared equivalent by evidence
+  - live_trading == false
+  - result_without_source_commit == invalid
+  - result_without_workload_id == invalid
+  - result_without_raw_artifact == invalid
+  - thought_is_not_authority
