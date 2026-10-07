@@ -1,0 +1,33 @@
+{
+  "schema": "GOLDSELFSCAN.OBSERVATION.v0.2",
+  "observation_id": "GOLD-OBS-2026-10-07-1M-MA-REACTION-01",
+  "observed_at_local": "2026-10-07T11:55:00-04:00",
+  "instrument": "XAUUSD",
+  "evidence_class": "USER_THIRD_EYE_OBSERVATION",
+  "timeframe_context": {
+    "primary": "5m",
+    "precision": "1m"
+  },
+  "event": {
+    "five_minute": {
+      "level": 4112.98,
+      "structure": "wicked_into_ma_then_failed_below",
+      "interpretation": "rejection_at_5m_ma_zone"
+    },
+    "one_minute": {
+      "level": 4103,
+      "structure": "price_reacted_off_1m_moving_average",
+      "interpretation": "1m_ma_held_as_immediate_dynamic_support_at_observation"
+    }
+  },
+  "state_transition_hypothesis": {
+    "prior": "5m_rejection",
+    "current": "1m_support_reaction",
+    "next_test": "determine_whether_bounce_displaces_upward_or_1m_ma_fails"
+  },
+  "discipline": {
+    "claim_level": "OBSERVATION_PLUS_HYPOTHESIS",
+    "execution_authority": false,
+    "broker_feed_not_silently_equated_with_gc_f": true
+  }
+}
